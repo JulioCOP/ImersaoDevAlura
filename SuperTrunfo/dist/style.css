@@ -1,7 +1,7 @@
 body {
     font-family: 'Roboto Mono', monospace;
     min-height: 854px;
-    background-image: url('https://www.alura.com.br/assets/img/imersoes/dev-2021/dia-07-super-trunfo-bg.png');
+    background-image: url('https://static-wp-tor15-prd.torcedores.com/wp-content/uploads/2019/02/45219129_10156790197592552_1655641344929955840_n.png');
     background-color: #000000;
     background-size: cover;
     background-position: center top;
@@ -15,7 +15,7 @@ body {
 }
 
 .page-title {
-    color: #ffffff;
+    color: red;
     margin: 5px 0;
 }
 
@@ -28,7 +28,7 @@ button {
 }
 
 h2 {
-    color: white;
+    color: red;
 }
 
 #carta-jogador {
@@ -67,5 +67,5 @@ h2 {
 }
 
 .opcoes {
-    color: white;
+    color: red;
 }

@@ -1,13 +1,14 @@
 // 1º =  criar lista com variaveis do mesmo tipo
 // atributos seria como se fosse um onjeto dentro da lista de objetos carta
-
+var cartas = []
 var carta1 = {
   nome:"Ronaldinho Gaúcho", 
   atributos: {
     ataque: 7, 
     defesa: 4,
    habilidade: 10
-  }
+  },
+  imagem: "https://pbs.twimg.com/media/EY4Yke7X0AAry_r.jpg"
 }
 
 var carta2={
@@ -16,7 +17,8 @@ var carta2={
     ataque: 5,
     defesa:9,
     habilidade:3
-  }
+  },
+  imagem: "http://cdn.espn.com.br/image/wide/622_44a68cff-0852-33a9-8334-37446a117f6e.gif"
 }
 
 var carta3={
@@ -25,7 +27,8 @@ var carta3={
     ataque: 8,
     defesa:5,
     habilidade:7
-  }
+  },
+  imagem: "https://s2.glbimg.com/w9u33OJaKOTiMWrO2GCvLVJThuM=/0x0:2047x1365/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_bc8228b6673f488aa253bbcb03c80ec5/internal_photos/bs/2022/J/x/h8KCyoRRS5EHobkRJOkw/52166842846-8a75ad9248-k.jpg"
 }
 
 var carta4={
@@ -33,8 +36,9 @@ var carta4={
   atributos:{
     ataque:0,
     defesa:10,
-    dabilidade: 3
-  }
+    habilidade: 3
+  },
+  imagem:"http://s2.glbimg.com/ioa3xVAHy6UDwtK7to7wFTAbV2Y=/s.glbimg.com/es/ge/f/original/2013/05/31/victor_atleticomg2_reu.jpg_30.jpg"
 }
 var carta5={
   nome:"Reinaldo",
@@ -42,16 +46,22 @@ var carta5={
     ataque:10,
     defesa:1,
     habilidade: 8
-  }
+  },
+  imagem:"https://pbs.twimg.com/media/ExzyVYZWQAg43m0.jpg:large"
 }
 // variaveis para escolher carta da maquina e do jogado aleartoriamente
 // necessário guardar as cartas (variaveis) dentro de uma lista
 
-var cartaMaquina 
-var cartaJogador
+var cartaMaquina = {}
+var cartaJogador= {}
 //pdoedria ficar var cartaJogador=0 e var cartaMaquina =0
 // ao colocar as variaveis fora da função, é possivel deixa-la acessível a outras funções, caso se deseja usa-las
-var cartas = [carta1,carta2,carta3,carta4,carta5]
+cartas.push(carta1)
+cartas.push(carta2)
+cartas.push(carta3)
+cartas.push(carta4)
+cartas.push(carta5)
+
 
 function sortearCarta(){
   // sortear 1 carta para maquina e uma carta para o jogador
