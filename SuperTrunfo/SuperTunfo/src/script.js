@@ -20,7 +20,7 @@ var carta2={
 }
 
 var carta3={
-  nome:"Hulk",   imagem: "https://mercadodofutebol.com/wp-content/uploads/2021/10/Downloader.la-617845e98b2a5.jpg",
+  nome:"Hulk",   imagem: "https://www.hojeemdia.com.br/polopoly_fs/1.836762!/image/image.jpg_gen/derivatives/landscape_490/image.jpg",
   atributos: {
     ataque: 8,
     defesa:5,
@@ -37,12 +37,66 @@ var carta4={
   }
 }
 var carta5={
-  nome:"Reinaldo",  imagem:"https://www.hojeemdia.com.br/polopoly_fs/1.836762!/image/image.jpg_gen/derivatives/landscape_490/image.jpg",
+  nome:"Reinaldo",  imagem:"https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Reinaldo_-_Atl%C3%A9tico_Mineiro.jpg/300px-Reinaldo_-_Atl%C3%A9tico_Mineiro.jpg",
 
   atributos:{
     ataque:10,
     defesa:1,
     habilidade: 8
+  }
+}
+var carta6={
+  nome:"Guilherme Arana",  imagem:"https://static-wp-tor15-prd.torcedores.com/wp-content/uploads/2022/02/atletico-guilherme-arana-1.jpg",
+
+  atributos:{
+    ataque:7,
+    defesa:6,
+    habilidade: 8
+  }
+}
+var carta7={
+  nome:"Leonardo Silva",  imagem:"https://terceirotempo.uol.com.br/imagens/73/48/110300.jpg",
+
+  atributos:{
+    ataque:5,
+    defesa:9,
+    habilidade: 3
+  }
+}
+var carta8={
+  nome:"Pierre",  imagem:"https://static.ndmais.com.br/2013/02/05-02-2013-03-02-16-pierre-tem-edema-na-coxa-direita-e-vira-preocupacao-no-atletico-mg.jpg",
+
+  atributos:{
+    ataque:2,
+    defesa:9,
+    habilidade: 3
+  }
+}
+var carta9={
+  nome:"Marques",  imagem:"https://terceirotempo.uol.com.br/imagens/56/60/qfl_fto_15660.jpg",
+
+  atributos:{
+    ataque:8,
+    defesa:4,
+    habilidade: 7
+  }
+}
+var carta10={
+  nome:"Rever",  imagem:"https://images.futebolinterior.com.br/2021/04/0002050053271_img.jpg",
+
+  atributos:{
+    ataque:6,
+    defesa:8,
+    habilidade: 6
+  }
+}
+var carta11={
+  nome:"GALO DOIDO",  imagem:"https://static-wp-tor15-prd.torcedores.com/wp-content/uploads/2021/11/mascote-atletico-mg-provoca-flamengo.png",
+
+  atributos:{
+    ataque:13,
+    defesa:13,
+    habilidade: 13
   }
 }
 // variaveis para escolher carta da maquina e do jogado aleartoriamente
@@ -52,20 +106,20 @@ var cartaMaquina;
 var cartaJogador;
 //pdoedria ficar var cartaJogador=0 e var cartaMaquina =0
 // ao colocar as variaveis fora da função, é possivel deixa-la acessível a outras funções, caso se deseja usa-las
-var cartas = [carta1,carta2,carta3,carta4,carta5];
+var cartas = [carta1,carta2,carta3,carta4,carta5,carta6,carta7,carta8,carta9,carta10,carta11];
 
 function sortearCarta(){
   // sortear 1 carta para maquina e uma carta para o jogador
   // Math.random()*5
   //transformar inteiro
-  var numeroCartaMaquina = parseInt(Math.random() *5)
+  var numeroCartaMaquina = parseInt(Math.random() *11)
   cartaMaquina= cartas[numeroCartaMaquina];
   
-  var numeroCartaJogador=parseInt(Math.random()*5);
+  var numeroCartaJogador=parseInt(Math.random()*11);
   // pode ser que o programa selecione a mesma carta no sorteio e pare de rodar.
   // é necessário uma estrutura condicional que faça que o programa rode novamente em caso de seleção de cartas iguais.
   while (numeroCartaMaquina==numeroCartaJogador){
-    numeroCartaJogador=parseInt(Math.random()*5);
+    numeroCartaJogador=parseInt(Math.random()*11);
   }
   cartaJogador=cartas[numeroCartaJogador];
   console.log(cartaJogador);
@@ -147,3 +201,4 @@ function exibirCartaMaquina(){
     divCartaMaquina.innerHTML = moldura + nome + tagHTML + opcoesTexto + "</div>";
 
 }
+
